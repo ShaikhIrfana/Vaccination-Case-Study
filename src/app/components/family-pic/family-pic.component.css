@@ -1,0 +1,22 @@
+/*.collapse navbar-collapse{
+    background-image: url(/assets/Images/familypic.png);
+}*/
+
+.bg-img {
+    
+    background-image: url("/assets/Images/familypic.png");
+    height: 700px;
+    width: 1520px;
+    margin: 0px;
+    
+  
+  
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+
+    
+    position: relative;
+  }
+  

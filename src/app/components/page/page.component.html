@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+        .container {
+            position: relative;
+            font-family: Arial;
+        }
+        
+        .stay {
+            position: absolute;
+            top: 450px;
+            left: 20px;
+            z-index: 2;
+        }
+        
+        .text-block {
+            position: absolute;
+            align-items: center;
+            top: 250px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+<body bgcolor="#B7CEEC">
+    
+    
+    <img src="/assets/Images/stayhome.png" class="stay" />
+
+
+    <div class="bg-img">
+        <div class="container">
+            <div class="topnav">
+                <nav>
+
+                    <a routerLink="/addIdCard" routerLinkActive="active">Add Id Card Details</a>
+                    <a routerLink="/getIdCard" routerLinkActive="active">Search Id Card Details</a>
+                    <a routerLink="/updateIdCard" routerLinkActive="active">Update Id Card Details</a>
+
+
+                    <a routerLink="/getMemberDetails" routerLinkActive="active">Search Member Details</a>
+
+                    <a routerLink="/familypic" routerLinkActive="active">Back</a>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+    <div class="text-block">
+        <h2>Covid-19 Vaccine</h2>
+        <h4>Take Responsibility<br> Fight Covid-19<br> As A Community</h4>
+
+    </div>
+    <router-outlet></router-outlet>
+</body>
+
+</html>

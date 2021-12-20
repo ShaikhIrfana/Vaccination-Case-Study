@@ -1,0 +1,65 @@
+/*body {
+    text-align: center;
+}
+
+html {
+    background-color: rgb(68, 188, 224);
+}
+
+a {
+    cursor: pointer;
+    cursor: hand;
+}
+
+input {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+input[type=text],
+select {
+    align-items: center;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+textarea,
+select {
+    align-items: center;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+}
+
+h5 {
+    text-align: center;
+}*/

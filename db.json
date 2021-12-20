@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "md",
+      "email": "md@gmail.com",
+      "password": "12345",
+      "mobile": 7585044149,
+      "id": 2
+    },
+    {
+      "fullname": "as",
+      "email": "as",
+      "password": "as",
+      "mobile": 12345,
+      "id": 3
+    },
+    {
+      "fullname": "md abdus sahid",
+      "email": "mdabdussahid1@gmail.com",
+      "mobile": "7585044149",
+      "password": "assahid1138",
+      "id": 4
+    },
+    {
+      "fullname": "Irfana",
+      "email": "shaikhirfana20@gmail.com",
+      "mobile": "8668555809",
+      "password": "123456",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="alert alert-primary">
+        <h3 class="h3-class">Search Vaccination Center </h3>
+    </div>
+    <form [formGroup]="centerForm" (ngSubmit)="getVaccinationcenterById()">
+
+        <div class="form-group">
+
+            <label for="code"> Code: </label>
+            <input class="form-control" type="text" name="code" id="code" formControlName="code" placeholder="Enter Center Code">
+            <div *ngIf="centerForm.controls['code'].errors &&(centerForm.controls['code'].touched || centerForm.controls['code'].dirty)" class="error">
+                Center code is required
+            </div>
+            <br>
+            <br>
+            <!--<div class="center">
+            <input type="submit" value="Search" class="btn btn-primary" [disabled]="centerForm.invalid">
+        </div>-->
+            <div>
+                <button class=" btn btn-primary" [disabled]="centerForm.invalid" style="margin-left: 40%;"> Submit</button>
+                <!--<input type="submit" value="Search"  [disabled]="centerForm.invalid">-->
+            </div>
+        </div>
+        <a routerLink="/familypic" href="/familypic" class="a-class">Back</a>
+    </form>
+    <table border="2" class="table table-bordered">
+        <tr>
+            <th> Code</th>
+            <th> Center Name</th>
+            <th> Center Address</th>
+            <th> City </th>
+            <th> State </th>
+            <th> Pincode </th>
+        </tr>
+
+        <tr>
+            <td>{{centers.code}}</td>
+            <td>{{centers.centername}}</td>
+            <td> {{centers.address}}</td>
+            <td> {{centers.city}}</td>
+            <td>{{centers.state}}</td>
+            <td> {{centers.pincode}}</td>
+        </tr>
+    </table>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+</html>

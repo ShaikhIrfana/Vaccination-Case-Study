@@ -1,0 +1,29 @@
+/*h2{
+    text-align: center;
+}
+.input{
+    color: red;
+}
+
+input[type=text]{
+    padding: 10px 20px;
+    margin:10px 0px;
+    border-color: black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=date]{
+    padding: 10px 20px;
+    margin:10px 0px;
+    border-color: black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]{
+    margin-left: 55px;
+    width: 25%;
+    font-size: 25px;
+}
+input[type=button]{
+    color: blue;
+}*/

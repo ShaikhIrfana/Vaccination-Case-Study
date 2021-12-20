@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <div class="alert alert-primary">
+    </div>
+    <form [formGroup]="adminForm" (ngSubmit)="saveAdmin()">
+        <!-- <div class="form-group">
+            <div *ngIf="adminForm.controls['adminId'].errors && 
+        (adminForm.controls['adminId'].touched || adminForm.controls['adminId'].dirty)">
+                Admin Id is required
+            </div>
+            <label for="adminId">Admin Id</label>
+            <input class="form-control" [readonly]="isUpdate" type="text" name="adminId" id="adminId" formControlName="adminId">
+        </div> -->
+        <div class="form-group">
+            <div *ngIf="adminForm.controls['firstName'].errors && 
+                (adminForm.controls['firstName'].touched || adminForm.controls['firstName'].dirty)">
+                First Name is required
+            </div>
+            <label for="firstName">First Name</label>
+            <input class="form-control" type="text" name="firstName" id="firstName" formControlName="firstName">
+        </div>
+        <div class="form-group">
+            <div *ngIf="adminForm.controls['lastName'].errors && 
+        (adminForm.controls['lastName'].touched || adminForm.controls['lastName'].dirty)">
+                Last Name is required
+            </div>
+            <label for="lastName">Last Name</label>
+            <input class="lastName" type="text" name="lastName" id="lastName" formControlName="lastName">
+        </div>
+        <div class="form-group">
+            <div *ngIf="adminForm.controls['username'].errors && 
+        (adminForm.controls['username'].touched || adminForm.controls['username'].dirty)">
+                User Name is required
+            </div>
+            <label for="username">User Name</label>
+            <input class="username" type="text" name="username" id="username" formControlName="username">
+        </div>
+        <div class="form-group">
+            <div *ngIf="adminForm.controls['password'].errors && 
+        (adminForm.controls['password'].touched || adminForm.controls['password'].dirty)">
+                Password is required
+            </div>
+            <label for="password">Password</label>
+            <input class="password" type="text" name="password" id="password" formControlName="password">
+        </div>
+
+        <input type="submit" value="Save" class="btn btn-primary" [disabled]="adminForm.invalid">
+    </form>
+    <hr>
+    <table class="table table-bordered">
+        <tr *ngIf="admin.length > 0">
+            <th>Admin Id</th>
+            <th>Admin First Name</th>
+            <th>Admin Last Name</th>
+            <th>UserId</th>
+            <th>Password</th>
+        </tr>
+        <tr *ngFor="let ad of admin">
+            <td>{{ad.adminId}}</td>
+            <td>{{ad.firstName}}</td>
+            <td>{{ad.lastName}}</td>
+            <td>{{ad.username}}</td>
+            <td>{{ad.password}}</td>
+            <td><input type="button" (click)="deleteAdmin(ad.adminId)" value="Delete" class="btn btn-primary"></td>
+            <td><input type="button" (click)="updateAdmin(ad.adminId)" value="Update" class="btn btn-primary"></td>
+        </tr>
+
+    </table>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+</html>

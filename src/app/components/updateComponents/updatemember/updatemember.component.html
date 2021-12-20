@@ -1,0 +1,59 @@
+<div class="alert alert-primary">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <h3 class="h3-class">Update Status</h3>
+</div>
+<form [formGroup]="memberForm" (ngSubmit)=" updateDetails()">
+    <div class="form-group">
+
+        <label for="id">Id (last 4 digit of adhar number)</label>
+        <input class="form-control" [readonly]="isUpdate" type="text" name="id" id="id" formControlName="id" placeholder="Enter Your Id">
+        <div *ngIf="memberForm.controls['id'].errors && 
+       (memberForm.controls['id'].touched || memberForm.controls['id'].dirty)" class="error">
+            Id is required. Please enter 4 digit number.
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <label for="name">Dose1 Status</label>
+        <input class="form-control" type="text" name="dose1status" id="dose1status" formControlName="dose1status" placeholder="Enter Your Dose1 Status">
+        <div *ngIf="memberForm.controls['dose1status'].errors && 
+       (memberForm.controls['dose1status'].touched || memberForm.controls['dose1status'].dirty)" class="error">
+            Status is required
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="dose1date">Dose1 Date</label>
+        <input class="form-control" type="text" name="dose1date" id="dose1date" formControlName="dose1date" placeholder="DD-MM-YYYY">
+
+    </div>
+
+    <div class="form-group">
+        <label for="dose2date">Dose2 Date</label>
+        <input class="form-control" type="text" name="dose2date" id="dose2date" formControlName="dose2date" placeholder="DD-MM-YYYY">
+    </div>
+
+    <div class="form-group">
+        <label for="dose2status">Dose2 Status</label>
+        <input class="form-control" type="text" name="dose2status" id="dose2status" formControlName="dose2status" placeholder="Enter Your Dose 2 Satus">
+        <div *ngIf="memberForm.controls['dose2status'].errors && 
+               (memberForm.controls['dose2status'].touched || memberForm.controls['dose2status'].dirty)" class="error">
+            Status is required
+        </div>
+    </div>
+    <br>
+    <div class="center">
+        <input type="submit" value="Update" class="btn btn-primary" [disabled]="memberForm.invalid"> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Clear" class="btn btn-primary">
+    </div>
+</form>
+<a routerLink="/homeAdmin" href="/homeAdmin" routerLinkActive="active">back</a>

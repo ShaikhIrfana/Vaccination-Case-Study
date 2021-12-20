@@ -1,0 +1,50 @@
+/*.class1{
+    color: red;
+}
+
+.label-class{
+    font-size: 20px;
+}
+
+.h3-class{
+    text-align: center;
+    text-decoration: underline;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:hover {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-color: black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit] {
+      margin-left: 100px;
+      width: 20%;
+      
+      font-size: 25px;
+  }
+
+  input[type = button]{
+      background-color: skyblue;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border-radius: 4px;
+  }
+  input[type = button]:hover{
+      background-color: #2893EE;
+      color: white;
+  }*/
